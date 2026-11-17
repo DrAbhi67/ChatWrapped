@@ -239,7 +239,7 @@ function buildSlides(data) {
     slides.push({
       id: "emoji", theme: "emoji", eyebrow: "Emoji personalities", share: { label: "TOP EMOJI", stat: `${champion.emoji} · ${count(champion.count)}` },
       content: `<p class="eyebrow">Emoji personalities</p><h2 class="section-heading emoji-headline" aria-label="Full sentences were optional."><span class="emoji-title-word" style="--word-index:0">Full</span> <span class="emoji-title-word" style="--word-index:1">sentences</span><br><span class="emoji-title-word" style="--word-index:2">were</span> <span class="emoji-title-word outline" style="--word-index:3">optional.</span></h2>
-        <div class="emoji-hero"><span class="emoji-hero-glyph">${escapeHTML(champion.emoji)}</span><div class="count-bubble"><strong>${countMarkup(champion.count, "emoji-champion-count")}</strong><span>uses<br>the champion</span></div></div>
+        <div class="emoji-hero"><span class="emoji-hero-glyph">${escapeHTML(champion.emoji)}</span><div class="count-bubble"><strong>${countMarkup(champion.count, "emoji-champion-count")}</strong><span>uses</span></div></div>
         <div class="emoji-people">${roles.map((role) => {
           const profile = data.participants_summary?.[role] || {};
           const topEmojis = profile.top_emojis || [];
