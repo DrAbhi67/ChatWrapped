@@ -164,7 +164,7 @@ function buildSlides(data) {
     content: `<div class="cover-main"><p class="eyebrow cover-eyebrow">A LITTLE TIME CAPSULE</p>
       <h1 class="cover-headline" aria-label="Two people. One chat."><span class="cover-line cover-line-solid" aria-hidden="true"><span class="cover-word" style="--word-index:0">Two</span> <span class="cover-word" style="--word-index:1">people.</span></span><span class="cover-line cover-line-outline" aria-hidden="true"><span class="cover-word" style="--word-index:2">One</span> <span class="cover-word" style="--word-index:3">chat.</span></span></h1>
       <p class="cover-copy">A wildly unreasonable number of messages. And somehow, still more to say.</p>
-      <p class="cover-names">Abhishek <span aria-hidden="true">x</span> Prishu</p></div>`,
+      <p class="cover-names">Abhishek <span aria-hidden="true">x</span> Prisha</p></div>`,
   });
 
   if (Number.isFinite(Number(totalMessages))) {
