@@ -1,0 +1,1597 @@
+{
+  "schema_version": 1,
+  "source_schema_version": 2,
+  "privacy": "Aggregate statistics only. No raw messages, timestamps per message, IDs, or memory excerpts are included.",
+  "participants": {
+    "you": "Abhishek",
+    "her": "Prisha"
+  },
+  "confession_story": {
+    "status": "available",
+    "relationship_date": "2026-09-09",
+    "next_date": "2026-09-10",
+    "confession_prompt_at_local": "2026-09-09T23:23:16.904000+05:30",
+    "website_revealed_at_local": "2026-09-09T23:25:53.303000+05:30",
+    "website_surprise_at_local": "2026-09-09T23:26:19.980000+05:30",
+    "proposal_link_sent_at_local": "2026-09-09T23:30:12.497000+05:30",
+    "girlfriend_reply_at_local": "2026-09-09T23:37:04.982000+05:30",
+    "first_i_love_you_back_at_local": "2026-09-09T23:42:13.482000+05:30",
+    "no_button_surprise_at_local": "2026-09-09T23:51:27.373000+05:30",
+    "late_night_last_message_at_local": "2026-09-10T02:32:52.792000+05:30",
+    "messages_from_proposal_to_late_night": 602,
+    "messages_from_proposal_to_late_night_by_role": {
+      "you": 342,
+      "her": 260
+    },
+    "seconds_from_proposal_to_late_night_end": 10960,
+    "messages_by_date": {
+      "2026-09-09": 1044,
+      "2026-09-10": 1037
+    },
+    "messages_by_role_and_date": {
+      "2026-09-09": {
+        "her": 470,
+        "you": 574
+      },
+      "2026-09-10": {
+        "her": 451,
+        "you": 586
+      }
+    }
+  },
+  "overview": {
+    "total_messages": 38118,
+    "text_messages": 33286,
+    "active_days": 111,
+    "date_range": {
+      "first_local": "2026-07-26T01:45:21.197+05:30",
+      "last_local": "2026-11-15T20:11:52.077+05:30"
+    },
+    "most_active_day": [
+      {
+        "date": "2026-09-12",
+        "message_count": 1617
+      }
+    ],
+    "most_active_month": [
+      {
+        "period": "2026-09",
+        "message_count": 22525
+      }
+    ],
+    "peak_messaging_hour": [
+      {
+        "period": "01:00",
+        "message_count": 5070
+      }
+    ],
+    "sessions": 48,
+    "timezone": "Asia/Kolkata"
+  },
+  "participants_summary": {
+    "you": {
+      "messages": 21566,
+      "average_text_length_characters": 29.14,
+      "initiated_sessions": 36,
+      "initiated_share_percent": 75.0,
+      "double_text_runs": 5717,
+      "triple_text_runs": 1691,
+      "maximum_consecutive_messages": 23,
+      "one_word_messages": 1748,
+      "question_messages": 1789,
+      "question_marks": 3325,
+      "longest_message_characters": 671,
+      "average_message_length_characters": 29.14,
+      "total_words": 105866,
+      "average_words_per_message": 6.43,
+      "top_meaningful_words": [
+        {
+          "phrase": "hi",
+          "count": 1745
+        },
+        {
+          "phrase": "tha",
+          "count": 1395
+        },
+        {
+          "phrase": "aur",
+          "count": 1061
+        },
+        {
+          "phrase": "hoon",
+          "count": 1001
+        },
+        {
+          "phrase": "kar",
+          "count": 883
+        },
+        {
+          "phrase": "rha",
+          "count": 868
+        }
+      ],
+      "top_bigrams": [
+        {
+          "phrase": "haan haan",
+          "count": 287
+        },
+        {
+          "phrase": "rha tha",
+          "count": 242
+        },
+        {
+          "phrase": "mai to",
+          "count": 241
+        },
+        {
+          "phrase": "ke liye",
+          "count": 233
+        },
+        {
+          "phrase": "kar rha",
+          "count": 212
+        }
+      ],
+      "top_trigrams": [
+        {
+          "phrase": "kar rha tha",
+          "count": 73
+        },
+        {
+          "phrase": "kar rha hoon",
+          "count": 71
+        },
+        {
+          "phrase": "lag rha hai",
+          "count": 67
+        },
+        {
+          "phrase": "mazak kar rha",
+          "count": 60
+        }
+      ],
+      "top_emojis": [
+        {
+          "emoji": "😭",
+          "count": 10839
+        },
+        {
+          "emoji": "🤣",
+          "count": 3622
+        },
+        {
+          "emoji": "🥹",
+          "count": 1298
+        },
+        {
+          "emoji": "😂",
+          "count": 996
+        },
+        {
+          "emoji": "😶‍🌫️",
+          "count": 740
+        }
+      ],
+      "emoji_uses": 27410,
+      "emoji_rate_per_100_messages": 127.1,
+      "midnight_messages": 7924,
+      "working_hours_messages": 6533,
+      "heart_emoji_uses": 40,
+      "top_heart_emoji": "🖤",
+      "reel_link_candidates": 1643,
+      "shared_post_candidates": 521,
+      "external_link_candidates": 152,
+      "attachment_items": {
+        "photos": 138,
+        "videos": 11,
+        "audio_files": 164
+      },
+      "median_reply_seconds": 14.116,
+      "average_valid_reply_seconds": 206.231,
+      "good_morning_occurrences": 10,
+      "good_night_occurrences": 9,
+      "compliment_occurrences": 185
+    },
+    "her": {
+      "messages": 16552,
+      "average_text_length_characters": 22.51,
+      "initiated_sessions": 12,
+      "initiated_share_percent": 25.0,
+      "double_text_runs": 3539,
+      "triple_text_runs": 688,
+      "maximum_consecutive_messages": 11,
+      "one_word_messages": 2275,
+      "question_messages": 957,
+      "question_marks": 2581,
+      "longest_message_characters": 559,
+      "average_message_length_characters": 22.51,
+      "total_words": 66253,
+      "average_words_per_message": 4.95,
+      "top_meaningful_words": [
+        {
+          "phrase": "toh",
+          "count": 2225
+        },
+        {
+          "phrase": "ha",
+          "count": 1726
+        },
+        {
+          "phrase": "hi",
+          "count": 993
+        },
+        {
+          "phrase": "kar",
+          "count": 796
+        },
+        {
+          "phrase": "hoon",
+          "count": 688
+        },
+        {
+          "phrase": "thik",
+          "count": 672
+        }
+      ],
+      "top_bigrams": [
+        {
+          "phrase": "ha ha",
+          "count": 789
+        },
+        {
+          "phrase": "thik hai",
+          "count": 639
+        },
+        {
+          "phrase": "nahi nahi",
+          "count": 291
+        },
+        {
+          "phrase": "nahi hai",
+          "count": 274
+        },
+        {
+          "phrase": "hm hm",
+          "count": 238
+        }
+      ],
+      "top_trigrams": [
+        {
+          "phrase": "ha thik hai",
+          "count": 147
+        },
+        {
+          "phrase": "ha ha thik",
+          "count": 135
+        },
+        {
+          "phrase": "koi baat nahi",
+          "count": 67
+        },
+        {
+          "phrase": "hai thik hai",
+          "count": 54
+        }
+      ],
+      "top_emojis": [
+        {
+          "emoji": "😭",
+          "count": 4549
+        },
+        {
+          "emoji": "🤣",
+          "count": 3018
+        },
+        {
+          "emoji": "🤧",
+          "count": 1723
+        },
+        {
+          "emoji": "😌",
+          "count": 1158
+        },
+        {
+          "emoji": "🥹",
+          "count": 647
+        }
+      ],
+      "emoji_uses": 16241,
+      "emoji_rate_per_100_messages": 98.12,
+      "midnight_messages": 6296,
+      "working_hours_messages": 4627,
+      "heart_emoji_uses": 11,
+      "top_heart_emoji": "❤️",
+      "reel_link_candidates": 919,
+      "shared_post_candidates": 216,
+      "external_link_candidates": 21,
+      "attachment_items": {
+        "videos": 15,
+        "photos": 61,
+        "audio_files": 128
+      },
+      "median_reply_seconds": 15.954,
+      "average_valid_reply_seconds": 183.476,
+      "good_morning_occurrences": 15,
+      "good_night_occurrences": 19,
+      "compliment_occurrences": 85
+    }
+  },
+  "reply": {
+    "median_seconds_by_responder": {
+      "you": 14.116,
+      "her": 15.954
+    },
+    "average_seconds_by_responder": {
+      "you": 206.231,
+      "her": 183.476
+    },
+    "fastest_valid_reply": {
+      "responder": "her",
+      "seconds": 0.002,
+      "timestamp_local": "2026-08-30T03:00:59.642+05:30"
+    },
+    "slowest_valid_reply": {
+      "responder": "you",
+      "seconds": 28795.92,
+      "timestamp_local": "2026-08-11T09:47:29.202+05:30"
+    },
+    "valid_reply_count": 23526,
+    "delay_buckets_by_responder": {
+      "her": {
+        "under_1_minute": 10406,
+        "1_to_5_minutes": 775,
+        "5_to_30_minutes": 302,
+        "30_to_60_minutes": 119,
+        "1_to_6_hours": 154,
+        "6_plus_hours": 7
+      },
+      "you": {
+        "under_1_minute": 10596,
+        "1_to_5_minutes": 502,
+        "5_to_30_minutes": 402,
+        "30_to_60_minutes": 121,
+        "1_to_6_hours": 117,
+        "6_plus_hours": 25
+      }
+    }
+  },
+  "language": {
+    "shared_vocabulary": [
+      {
+        "word": "hai",
+        "you_or_role_counts": {
+          "her": 3911,
+          "you": 4248
+        }
+      },
+      {
+        "word": "nahi",
+        "you_or_role_counts": {
+          "her": 2329,
+          "you": 2406
+        }
+      },
+      {
+        "word": "toh",
+        "you_or_role_counts": {
+          "her": 2225,
+          "you": 6
+        }
+      },
+      {
+        "word": "ha",
+        "you_or_role_counts": {
+          "her": 1726,
+          "you": 324
+        }
+      },
+      {
+        "word": "bhi",
+        "you_or_role_counts": {
+          "her": 1020,
+          "you": 1381
+        }
+      },
+      {
+        "word": "ho",
+        "you_or_role_counts": {
+          "her": 1017,
+          "you": 1497
+        }
+      },
+      {
+        "word": "hi",
+        "you_or_role_counts": {
+          "her": 993,
+          "you": 1745
+        }
+      },
+      {
+        "word": "kya",
+        "you_or_role_counts": {
+          "her": 811,
+          "you": 1168
+        }
+      },
+      {
+        "word": "kar",
+        "you_or_role_counts": {
+          "her": 796,
+          "you": 883
+        }
+      },
+      {
+        "word": "me",
+        "you_or_role_counts": {
+          "her": 786,
+          "you": 311
+        }
+      },
+      {
+        "word": "hoon",
+        "you_or_role_counts": {
+          "her": 688,
+          "you": 1001
+        }
+      },
+      {
+        "word": "thik",
+        "you_or_role_counts": {
+          "her": 672,
+          "you": 13
+        }
+      },
+      {
+        "word": "main",
+        "you_or_role_counts": {
+          "her": 646,
+          "you": 11
+        }
+      },
+      {
+        "word": "aur",
+        "you_or_role_counts": {
+          "her": 608,
+          "you": 1061
+        }
+      },
+      {
+        "word": "se",
+        "you_or_role_counts": {
+          "her": 560,
+          "you": 831
+        }
+      },
+      {
+        "word": "tha",
+        "you_or_role_counts": {
+          "her": 528,
+          "you": 1395
+        }
+      },
+      {
+        "word": "wo",
+        "you_or_role_counts": {
+          "her": 509,
+          "you": 1
+        }
+      },
+      {
+        "word": "na",
+        "you_or_role_counts": {
+          "her": 506,
+          "you": 895
+        }
+      },
+      {
+        "word": "acha",
+        "you_or_role_counts": {
+          "her": 498,
+          "you": 602
+        }
+      },
+      {
+        "word": "hm",
+        "you_or_role_counts": {
+          "her": 480,
+          "you": 9
+        }
+      },
+      {
+        "word": "ke",
+        "you_or_role_counts": {
+          "her": 463,
+          "you": 768
+        }
+      },
+      {
+        "word": "mujhe",
+        "you_or_role_counts": {
+          "her": 444,
+          "you": 668
+        }
+      },
+      {
+        "word": "haa",
+        "you_or_role_counts": {
+          "her": 429,
+          "you": 123
+        }
+      },
+      {
+        "word": "ye",
+        "you_or_role_counts": {
+          "her": 426,
+          "you": 1032
+        }
+      },
+      {
+        "word": "kuch",
+        "you_or_role_counts": {
+          "her": 423,
+          "you": 554
+        }
+      },
+      {
+        "word": "aap",
+        "you_or_role_counts": {
+          "her": 414,
+          "you": 9
+        }
+      },
+      {
+        "word": "rahi",
+        "you_or_role_counts": {
+          "her": 409,
+          "you": 16
+        }
+      },
+      {
+        "word": "ki",
+        "you_or_role_counts": {
+          "her": 382,
+          "you": 856
+        }
+      },
+      {
+        "word": "thi",
+        "you_or_role_counts": {
+          "her": 379,
+          "you": 460
+        }
+      },
+      {
+        "word": "but",
+        "you_or_role_counts": {
+          "her": 342,
+          "you": 352
+        }
+      },
+      {
+        "word": "ab",
+        "you_or_role_counts": {
+          "her": 324,
+          "you": 440
+        }
+      },
+      {
+        "word": "are",
+        "you_or_role_counts": {
+          "her": 323,
+          "you": 489
+        }
+      },
+      {
+        "word": "ko",
+        "you_or_role_counts": {
+          "her": 318,
+          "you": 425
+        }
+      },
+      {
+        "word": "haaa",
+        "you_or_role_counts": {
+          "her": 315,
+          "you": 22
+        }
+      },
+      {
+        "word": "pata",
+        "you_or_role_counts": {
+          "her": 313,
+          "you": 420
+        }
+      },
+      {
+        "word": "par",
+        "you_or_role_counts": {
+          "her": 309,
+          "you": 418
+        }
+      },
+      {
+        "word": "koi",
+        "you_or_role_counts": {
+          "her": 308,
+          "you": 247
+        }
+      },
+      {
+        "word": "bas",
+        "you_or_role_counts": {
+          "her": 295,
+          "you": 310
+        }
+      },
+      {
+        "word": "karo",
+        "you_or_role_counts": {
+          "her": 277,
+          "you": 239
+        }
+      },
+      {
+        "word": "rahe",
+        "you_or_role_counts": {
+          "her": 275,
+          "you": 21
+        }
+      },
+      {
+        "word": "maine",
+        "you_or_role_counts": {
+          "her": 268,
+          "you": 10
+        }
+      },
+      {
+        "word": "baat",
+        "you_or_role_counts": {
+          "her": 257,
+          "you": 446
+        }
+      },
+      {
+        "word": "okay",
+        "you_or_role_counts": {
+          "her": 249,
+          "you": 439
+        }
+      },
+      {
+        "word": "ek",
+        "you_or_role_counts": {
+          "her": 235,
+          "you": 466
+        }
+      },
+      {
+        "word": "mere",
+        "you_or_role_counts": {
+          "her": 231,
+          "you": 373
+        }
+      },
+      {
+        "word": "ka",
+        "you_or_role_counts": {
+          "her": 225,
+          "you": 440
+        }
+      },
+      {
+        "word": "kyu",
+        "you_or_role_counts": {
+          "her": 219,
+          "you": 300
+        }
+      },
+      {
+        "word": "gayi",
+        "you_or_role_counts": {
+          "her": 215,
+          "you": 1
+        }
+      },
+      {
+        "word": "raha",
+        "you_or_role_counts": {
+          "her": 215,
+          "you": 40
+        }
+      },
+      {
+        "word": "hoga",
+        "you_or_role_counts": {
+          "her": 203,
+          "you": 191
+        }
+      },
+      {
+        "word": "abhi",
+        "you_or_role_counts": {
+          "her": 202,
+          "you": 6
+        }
+      },
+      {
+        "word": "liye",
+        "you_or_role_counts": {
+          "her": 198,
+          "you": 364
+        }
+      },
+      {
+        "word": "bola",
+        "you_or_role_counts": {
+          "her": 191,
+          "you": 217
+        }
+      },
+      {
+        "word": "aa",
+        "you_or_role_counts": {
+          "her": 186,
+          "you": 201
+        }
+      },
+      {
+        "word": "the",
+        "you_or_role_counts": {
+          "her": 182,
+          "you": 309
+        }
+      },
+      {
+        "word": "achaaa",
+        "you_or_role_counts": {
+          "her": 179,
+          "you": 71
+        }
+      },
+      {
+        "word": "isliye",
+        "you_or_role_counts": {
+          "her": 177,
+          "you": 116
+        }
+      },
+      {
+        "word": "matlab",
+        "you_or_role_counts": {
+          "her": 177,
+          "you": 91
+        }
+      },
+      {
+        "word": "do",
+        "you_or_role_counts": {
+          "her": 173,
+          "you": 182
+        }
+      },
+      {
+        "word": "bol",
+        "you_or_role_counts": {
+          "her": 166,
+          "you": 236
+        }
+      },
+      {
+        "word": "diya",
+        "you_or_role_counts": {
+          "her": 165,
+          "you": 256
+        }
+      },
+      {
+        "word": "karna",
+        "you_or_role_counts": {
+          "her": 163,
+          "you": 227
+        }
+      },
+      {
+        "word": "aisa",
+        "you_or_role_counts": {
+          "her": 162,
+          "you": 158
+        }
+      },
+      {
+        "word": "meri",
+        "you_or_role_counts": {
+          "her": 161,
+          "you": 317
+        }
+      },
+      {
+        "word": "hota",
+        "you_or_role_counts": {
+          "her": 160,
+          "you": 187
+        }
+      },
+      {
+        "word": "gaya",
+        "you_or_role_counts": {
+          "her": 159,
+          "you": 3
+        }
+      },
+      {
+        "word": "mat",
+        "you_or_role_counts": {
+          "her": 156,
+          "you": 178
+        }
+      },
+      {
+        "word": "wahi",
+        "you_or_role_counts": {
+          "her": 155,
+          "you": 1
+        }
+      },
+      {
+        "word": "bolo",
+        "you_or_role_counts": {
+          "her": 135,
+          "you": 86
+        }
+      },
+      {
+        "word": "batao",
+        "you_or_role_counts": {
+          "her": 135,
+          "you": 241
+        }
+      },
+      {
+        "word": "jada",
+        "you_or_role_counts": {
+          "her": 134,
+          "you": 1
+        }
+      },
+      {
+        "word": "achaaaa",
+        "you_or_role_counts": {
+          "her": 134,
+          "you": 40
+        }
+      },
+      {
+        "word": "sath",
+        "you_or_role_counts": {
+          "her": 134,
+          "you": 206
+        }
+      },
+      {
+        "word": "phele",
+        "you_or_role_counts": {
+          "her": 131,
+          "you": 1
+        }
+      },
+      {
+        "word": "kiya",
+        "you_or_role_counts": {
+          "her": 130,
+          "you": 59
+        }
+      },
+      {
+        "word": "aise",
+        "you_or_role_counts": {
+          "her": 129,
+          "you": 136
+        }
+      },
+      {
+        "word": "karte",
+        "you_or_role_counts": {
+          "her": 126,
+          "you": 120
+        }
+      },
+      {
+        "word": "jao",
+        "you_or_role_counts": {
+          "her": 126,
+          "you": 165
+        }
+      },
+      {
+        "word": "kaise",
+        "you_or_role_counts": {
+          "her": 125,
+          "you": 15
+        }
+      },
+      {
+        "word": "achi",
+        "you_or_role_counts": {
+          "her": 121,
+          "you": 112
+        }
+      },
+      {
+        "word": "dekha",
+        "you_or_role_counts": {
+          "her": 118,
+          "you": 58
+        }
+      },
+      {
+        "word": "karti",
+        "you_or_role_counts": {
+          "her": 118,
+          "you": 159
+        }
+      },
+      {
+        "word": "baad",
+        "you_or_role_counts": {
+          "her": 115,
+          "you": 154
+        }
+      },
+      {
+        "word": "jo",
+        "you_or_role_counts": {
+          "her": 115,
+          "you": 133
+        }
+      },
+      {
+        "word": "haaaa",
+        "you_or_role_counts": {
+          "her": 115,
+          "you": 7
+        }
+      },
+      {
+        "word": "khud",
+        "you_or_role_counts": {
+          "her": 114,
+          "you": 113
+        }
+      },
+      {
+        "word": "itna",
+        "you_or_role_counts": {
+          "her": 113,
+          "you": 310
+        }
+      },
+      {
+        "word": "lag",
+        "you_or_role_counts": {
+          "her": 113,
+          "you": 218
+        }
+      },
+      {
+        "word": "maza",
+        "you_or_role_counts": {
+          "her": 111,
+          "you": 115
+        }
+      },
+      {
+        "word": "time",
+        "you_or_role_counts": {
+          "her": 110,
+          "you": 199
+        }
+      },
+      {
+        "word": "sab",
+        "you_or_role_counts": {
+          "her": 107,
+          "you": 241
+        }
+      },
+      {
+        "word": "kon",
+        "you_or_role_counts": {
+          "her": 106,
+          "you": 60
+        }
+      },
+      {
+        "word": "dungi",
+        "you_or_role_counts": {
+          "her": 104,
+          "you": 1
+        }
+      },
+      {
+        "word": "karne",
+        "you_or_role_counts": {
+          "her": 102,
+          "you": 179
+        }
+      },
+      {
+        "word": "dekh",
+        "you_or_role_counts": {
+          "her": 102,
+          "you": 172
+        }
+      },
+      {
+        "word": "baar",
+        "you_or_role_counts": {
+          "her": 101,
+          "you": 146
+        }
+      },
+      {
+        "word": "liya",
+        "you_or_role_counts": {
+          "her": 101,
+          "you": 114
+        }
+      },
+      {
+        "word": "apne",
+        "you_or_role_counts": {
+          "her": 101,
+          "you": 103
+        }
+      },
+      {
+        "word": "tak",
+        "you_or_role_counts": {
+          "her": 100,
+          "you": 177
+        }
+      },
+      {
+        "word": "aata",
+        "you_or_role_counts": {
+          "her": 100,
+          "you": 98
+        }
+      }
+    ],
+    "message_language_estimates": {
+      "english": 2120,
+      "hinglish_or_hindi": 14011,
+      "hinglish_mixed": 5672,
+      "unclassified": 8053
+    }
+  },
+  "emoji": {
+    "combined_top_10": [
+      {
+        "emoji": "😭",
+        "count": 15388
+      },
+      {
+        "emoji": "🤣",
+        "count": 6640
+      },
+      {
+        "emoji": "🤧",
+        "count": 2447
+      },
+      {
+        "emoji": "🥹",
+        "count": 1945
+      },
+      {
+        "emoji": "😌",
+        "count": 1788
+      },
+      {
+        "emoji": "😂",
+        "count": 1098
+      },
+      {
+        "emoji": "😛",
+        "count": 1084
+      },
+      {
+        "emoji": "😝",
+        "count": 1057
+      },
+      {
+        "emoji": "😶‍🌫️",
+        "count": 894
+      },
+      {
+        "emoji": "😽",
+        "count": 706
+      }
+    ],
+    "combined_uses": 43651,
+    "top_adjacent_combinations": [
+      {
+        "combination": [
+          "😭",
+          "😭"
+        ],
+        "count": 6071
+      },
+      {
+        "combination": [
+          "🤣",
+          "🤣"
+        ],
+        "count": 3947
+      },
+      {
+        "combination": [
+          "😭",
+          "🙏"
+        ],
+        "count": 610
+      },
+      {
+        "combination": [
+          "🥹",
+          "🥹"
+        ],
+        "count": 387
+      },
+      {
+        "combination": [
+          "😝",
+          "😝"
+        ],
+        "count": 380
+      }
+    ],
+    "comparison": {
+      "roles": [
+        "her",
+        "you"
+      ],
+      "more_emoji_uses": "you",
+      "higher_emoji_message_rate": "you",
+      "more_diverse_emoji_vocabulary": "you"
+    }
+  },
+  "media": {
+    "reel_link_candidates": {
+      "total": 2562,
+      "by_role": {
+        "her": 919,
+        "you": 1643
+      },
+      "per_week_over_export_span": 158.71
+    },
+    "shared_link_types": {
+      "shared_reel_candidate": 2562,
+      "shared_instagram_post_candidate": 737,
+      "external_link": 173,
+      "other_instagram_link": 3,
+      "story_share_candidate": 31
+    },
+    "attachment_item_counts": {
+      "photos": 199,
+      "videos": 26,
+      "audio_files": 292
+    },
+    "reactions_on_shared_content": 1837,
+    "unavailable": {
+      "voice_note_count": null,
+      "gif_attachment_count": null,
+      "sticker_count": null,
+      "reason": "Audio file references do not distinguish voice notes; no GIF attachment field was observed; there is no sticker discriminator in this export."
+    },
+    "candidate_note": "No linked media was opened or inspected; all link-based type labels are uncertain candidates."
+  },
+  "relationship": {
+    "phrase_categories": {
+      "i_love_you": {
+        "occurrences_by_role": {
+          "her": 51,
+          "you": 45
+        },
+        "messages_by_role": {
+          "her": 45,
+          "you": 36
+        }
+      },
+      "good_morning": {
+        "occurrences_by_role": {
+          "her": 15,
+          "you": 10
+        },
+        "messages_by_role": {
+          "her": 15,
+          "you": 10
+        }
+      },
+      "good_night": {
+        "occurrences_by_role": {
+          "her": 19,
+          "you": 9
+        },
+        "messages_by_role": {
+          "her": 19,
+          "you": 9
+        }
+      },
+      "compliments": {
+        "occurrences_by_role": {
+          "her": 85,
+          "you": 185
+        },
+        "messages_by_role": {
+          "her": 81,
+          "you": 174
+        }
+      },
+      "appreciation": {
+        "occurrences_by_role": {
+          "her": 41,
+          "you": 77
+        },
+        "messages_by_role": {
+          "her": 41,
+          "you": 76
+        }
+      },
+      "pet_names": {
+        "occurrences_by_role": {
+          "her": 19,
+          "you": 37
+        },
+        "messages_by_role": {
+          "her": 18,
+          "you": 36
+        }
+      },
+      "apologies": {
+        "occurrences_by_role": {
+          "her": 38,
+          "you": 150
+        },
+        "messages_by_role": {
+          "her": 36,
+          "you": 128
+        }
+      },
+      "reassurance": {
+        "occurrences_by_role": {
+          "her": 3,
+          "you": 8
+        },
+        "messages_by_role": {
+          "her": 3,
+          "you": 8
+        }
+      },
+      "support": {
+        "occurrences_by_role": {
+          "her": 4,
+          "you": 10
+        },
+        "messages_by_role": {
+          "her": 4,
+          "you": 10
+        }
+      },
+      "affectionate_words": {
+        "occurrences_by_role": {
+          "her": 110,
+          "you": 198
+        },
+        "messages_by_role": {
+          "her": 105,
+          "you": 191
+        }
+      }
+    },
+    "monthly_affectionate_phrases": {
+      "2026-07": {},
+      "2026-08": {
+        "affectionate_words": {
+          "her": 17,
+          "you": 21
+        },
+        "pet_names": {
+          "her": 3,
+          "you": 3
+        }
+      },
+      "2026-09": {
+        "pet_names": {
+          "her": 10,
+          "you": 26
+        },
+        "affectionate_words": {
+          "her": 75,
+          "you": 150
+        },
+        "i_love_you": {
+          "her": 40,
+          "you": 33
+        }
+      },
+      "2026-10": {
+        "i_love_you": {
+          "her": 9,
+          "you": 9
+        },
+        "affectionate_words": {
+          "her": 12,
+          "you": 18
+        },
+        "pet_names": {
+          "her": 4,
+          "you": 6
+        }
+      },
+      "2026-11": {
+        "pet_names": {
+          "her": 2,
+          "you": 2
+        },
+        "affectionate_words": {
+          "her": 6,
+          "you": 9
+        },
+        "i_love_you": {
+          "her": 2,
+          "you": 3
+        }
+      }
+    }
+  },
+  "time": {
+    "night_owl_02_to_05_by_role": {
+      "her": 2027,
+      "you": 2591
+    },
+    "most_active_30_minute_clock_windows": {
+      "combined": [
+        {
+          "start": "01:00",
+          "end": "01:30",
+          "message_count": 2581
+        }
+      ],
+      "her": [
+        {
+          "start": "01:00",
+          "end": "01:30",
+          "message_count": 1164
+        }
+      ],
+      "you": [
+        {
+          "start": "01:00",
+          "end": "01:30",
+          "message_count": 1417
+        }
+      ]
+    },
+    "most_active_consecutive_3_day_period": {
+      "window_days": 3,
+      "message_count": 3505,
+      "windows": [
+        {
+          "start_date": "2026-09-12",
+          "end_date": "2026-09-14"
+        }
+      ],
+      "definition": "Highest message count in any 3 consecutive local calendar dates, inclusive."
+    },
+    "most_active_consecutive_7_day_period": {
+      "window_days": 7,
+      "message_count": 7360,
+      "windows": [
+        {
+          "start_date": "2026-09-08",
+          "end_date": "2026-09-14"
+        }
+      ],
+      "definition": "Highest message count in any 7 consecutive local calendar dates, inclusive."
+    },
+    "daily_consistency_by_role": {
+      "her": {
+        "active_dates": 111,
+        "calendar_dates_in_export_span": 113,
+        "active_date_percent": 98.23,
+        "average_messages_per_active_date": 149.12,
+        "longest_active_day_streak": {
+          "days": 97,
+          "start_date": "2026-07-26",
+          "end_date": "2026-10-30"
+        }
+      },
+      "you": {
+        "active_dates": 111,
+        "calendar_dates_in_export_span": 113,
+        "active_date_percent": 98.23,
+        "average_messages_per_active_date": 194.29,
+        "longest_active_day_streak": {
+          "days": 97,
+          "start_date": "2026-07-26",
+          "end_date": "2026-10-30"
+        }
+      }
+    },
+    "approximate_chat_time": {
+      "total_elapsed_hours": 402.1,
+      "rounded_hours": 402,
+      "session_count": 1364,
+      "silence_cutoff_minutes": 15,
+      "definition": "Approximate elapsed time summed across sessions; a new session starts when the gap between consecutive conversation messages exceeds 15 minutes. This includes short pauses and does not measure hands-on typing time."
+    },
+    "approximate_instagram_time": {
+      "chat_window_hours": 402.1,
+      "reel_link_candidates": 2562,
+      "assumed_seconds_per_reel_link_candidate": 60,
+      "estimated_reel_hours": 42.7,
+      "total_hours": 444.8,
+      "rounded_hours": 445,
+      "definition": "Approximate chat-window time plus an assumed 60 seconds for each Reel-link candidate. Reel links may not all be verified Reels or watched; actual watch time is unavailable."
+    }
+  },
+  "awards": {
+    "Night Owl": {
+      "winner": "you",
+      "status": "winner",
+      "statistic_by_role": {
+        "her": 6296,
+        "you": 7924
+      },
+      "explanation": "Most messages sent from 00:00 through 04:59 local time.",
+      "note": null
+    },
+    "Night Owl 2–5 AM": {
+      "winner": "you",
+      "status": "winner",
+      "statistic_by_role": {
+        "her": 2027,
+        "you": 2591
+      },
+      "explanation": "Most authored message rows sent from 02:00 through 04:59 local time; reaction events are excluded.",
+      "note": null
+    },
+    "Double Texter": {
+      "winner": "you",
+      "status": "winner",
+      "statistic_by_role": {
+        "her": 3539,
+        "you": 5717
+      },
+      "explanation": "Most same-sender bursts of at least two consecutive rows.",
+      "note": null
+    },
+    "Speedster": {
+      "winner": "her",
+      "status": "winner",
+      "statistic_by_role": {
+        "her": 183.476,
+        "you": 206.231
+      },
+      "explanation": "Lowest average valid reply delay; only positive sender-switch comparisons count.",
+      "note": null
+    },
+    "Flash Trophy": {
+      "winner": "her",
+      "status": "winner",
+      "statistic_by_role": {
+        "her": 183.476,
+        "you": 206.231
+      },
+      "explanation": "Lowest average valid reply delay; only positive sender-switch comparisons count.",
+      "note": null
+    },
+    "Essay Writer": {
+      "winner": "you",
+      "status": "winner",
+      "statistic_by_role": {
+        "her": 559,
+        "you": 671
+      },
+      "explanation": "Longest single authored text message by trimmed character count.",
+      "note": null
+    },
+    "Yapper Medal": {
+      "winner": "you",
+      "status": "winner",
+      "statistic_by_role": {
+        "her": 559,
+        "you": 671
+      },
+      "explanation": "Longest single authored text message by trimmed character count.",
+      "note": null
+    },
+    "Emoji Addict": {
+      "winner": "you",
+      "status": "winner",
+      "statistic_by_role": {
+        "her": 98.12,
+        "you": 127.1
+      },
+      "explanation": "Most message-text emoji sequences per 100 non-reaction conversation rows.",
+      "note": null
+    },
+    "Reel Dealer": {
+      "winner": "you",
+      "status": "winner",
+      "statistic_by_role": {
+        "her": 919,
+        "you": 1643
+      },
+      "explanation": "Most links whose visible path is a Reel candidate; content is unverified.",
+      "note": null
+    },
+    "Reel Minister": {
+      "winner": "you",
+      "status": "winner",
+      "statistic_by_role": {
+        "her": 919,
+        "you": 1643
+      },
+      "explanation": "Most links whose visible path is a Reel candidate; content is unverified.",
+      "note": null
+    },
+    "Conversation Starter": {
+      "winner": "you",
+      "status": "winner",
+      "statistic_by_role": {
+        "her": 12,
+        "you": 36
+      },
+      "explanation": "Most sessions initiated after the configured inactivity gap.",
+      "note": null
+    },
+    "Simp of the Year": {
+      "winner": "you",
+      "status": "winner",
+      "statistic_by_role": {
+        "her": 85,
+        "you": 185
+      },
+      "explanation": "Most configured compliment phrase hits in message text; keyword counts do not interpret emotional intent.",
+      "note": null
+    },
+    "Ghost": {
+      "winner": null,
+      "status": "unavailable",
+      "statistic_by_role": {
+        "her": 12,
+        "you": 35
+      },
+      "explanation": "No winner: an unanswered turn cannot establish that someone intentionally ghosted.",
+      "note": "Intent cannot be inferred from message timing."
+    },
+    "Good Morning Person": {
+      "winner": "her",
+      "status": "winner",
+      "statistic_by_role": {
+        "her": 15,
+        "you": 10
+      },
+      "explanation": "Most literal matches to the configured good-morning phrase list.",
+      "note": null
+    },
+    "Yap Champion": {
+      "winner": "you",
+      "status": "winner",
+      "statistic_by_role": {
+        "her": 66253,
+        "you": 105866
+      },
+      "explanation": "Most Unicode word tokens in authored text after confirmed spelling normalization.",
+      "note": null
+    }
+  },
+  "method_notes": {
+    "sessions": "Sessions split only when the gap between adjacent rows exceeds 8 hours; the last sender is the session ender, not necessarily someone ending the relationship or chat intentionally.",
+    "reply_time": "Only positive timestamp deltas across a sender switch within a session. Equal or negative deltas are excluded because they have no valid reply latency.",
+    "phrases": "Case-insensitive literal phrase matches in authored text only. Phrases may overlap and can appear jokingly or in quoted content.",
+    "media_candidates": "URL-path candidates from the parser, not verified media classifications; no URL alone is treated as verified Reel content."
+  }
+}
