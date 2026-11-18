@@ -442,38 +442,44 @@ function render(data) {
   const hiddenLetterText = "Hi you, Ye stats to sirf ek fun project h and I’m not sure how accurate it is, but one thing I’m sure of is that all these numbers can’t express how much I love you my baby😽. Our first meet still feels like a dream to me, and meeting you is the best coincidence that’s ever happened to me💗.";
 
   function makeLoveYouBurst() {
-    const viewportWidth = Math.max(1, Math.floor(window.visualViewport?.width || document.documentElement.clientWidth || window.innerWidth));
-    const viewportHeight = Math.max(1, Math.floor(window.visualViewport?.height || document.documentElement.clientHeight || window.innerHeight));
+    const burstWidth = Math.max(1, Math.floor(stage.clientWidth));
+    const burstHeight = Math.max(1, Math.floor(stage.clientHeight));
     const burst = document.createElement("div");
     burst.className = "love-you-burst";
     burst.setAttribute("aria-hidden", "true");
     Object.assign(burst.style, {
-      position: "fixed", inset: "auto", top: "0", left: "0",
-      width: `${viewportWidth}px`, height: `${viewportHeight}px`, overflow: "hidden",
-      zIndex: "2147483647", pointerEvents: "none", contain: "strict",
+      position: "absolute", inset: "0", width: `${burstWidth}px`, height: `${burstHeight}px`,
+      overflow: "hidden", zIndex: "6", pointerEvents: "none", contain: "strict",
     });
-    document.body.append(burst);
+    stage.append(burst);
     for (let i = 0; i < 36; i += 1) {
       const phrase = document.createElement("span");
       phrase.textContent = "I love you";
       Object.assign(phrase.style, {
-        position: "absolute", display: "block", left: "8px", top: `${viewportHeight + 32}px`, bottom: "auto",
+        position: "absolute", display: "block", left: "8px", top: `${burstHeight + 32}px`, bottom: "auto",
         width: "max-content", height: "auto",
-        maxWidth: `${Math.max(80, viewportWidth - 16)}px`, color: "#fff3f7",
+        maxWidth: `${Math.max(80, burstWidth - 16)}px`, color: "#fff3f7",
         fontSize: `${14 + Math.random() * 5}px`, lineHeight: "1.15", fontWeight: "900",
         letterSpacing: "-.035em", whiteSpace: "nowrap",
         textShadow: "0 2px 15px rgba(255,75,143,.72), 0 0 24px rgba(255,210,224,.4)",
         willChange: "transform, opacity",
       });
       burst.append(phrase);
-      const phraseWidth = Math.min(viewportWidth - 16, phrase.getBoundingClientRect().width || 100);
-      const edge = Math.min(14, Math.floor(viewportWidth / 4));
-      const maxLeft = Math.max(edge, viewportWidth - phraseWidth - edge);
+      const phraseWidth = Math.min(burstWidth - 16, phrase.getBoundingClientRect().width || 100);
+      const edge = Math.min(14, Math.floor(burstWidth / 4));
+      const maxLeft = Math.max(edge, burstWidth - phraseWidth - edge);
       const left = edge + Math.random() * Math.max(0, maxLeft - edge);
       const delay = Math.random() * 240;
       const drift = Math.round(Math.random() * 20 - 10);
       phrase.style.left = `${left}px`;
-      if (reduceMotion) phrase.style.top = `${Math.max(12, Math.random() * Math.max(1, viewportHeight - 38))}px`;
+      if (reduceMotion) {
+        const rows = 12;
+        const row = i % rows;
+        const column = Math.floor(i / rows);
+        const columnWidth = burstWidth / 3;
+        phrase.style.left = `${column * columnWidth + Math.max(4, (columnWidth - phraseWidth) / 2)}px`;
+        phrase.style.top = `${((row + .5) / rows) * Math.max(1, burstHeight - 30)}px`;
+      }
       if (i % 3 === 0) phrase.style.color = "#ffe8a7";
       else if (i % 3 === 1) phrase.style.color = "#ffb9dc";
       if (typeof phrase.animate === "function") {
@@ -488,14 +494,14 @@ function render(data) {
               { opacity: 0, transform: "translate3d(0,0,0) rotate(-5deg) scale(.94)" },
               { opacity: .96, transform: "translate3d(0,-8vh,0) rotate(0) scale(1)", offset: .14 },
               { opacity: .96, transform: "translate3d(0,-48vh,0) rotate(2deg) scale(1)" },
-              { opacity: 0, transform: `translate3d(${drift}px,-${viewportHeight + 52}px,0) rotate(6deg) scale(1.02)` },
+              { opacity: 0, transform: `translate3d(${drift}px,-${burstHeight + 52}px,0) rotate(6deg) scale(1.02)` },
             ];
         phrase.animate(frames, {
-          duration: reduceMotion ? 2400 : 2450 + Math.random() * 400,
+          duration: reduceMotion ? 2100 : 2450 + Math.random() * 400,
           delay, easing: "cubic-bezier(.2,.65,.25,1)", fill: "both",
         });
       } else {
-        phrase.style.top = `${Math.random() * Math.max(1, viewportHeight - 40)}px`;
+        phrase.style.top = `${Math.random() * Math.max(1, burstHeight - 40)}px`;
         phrase.style.opacity = ".96";
       }
     }

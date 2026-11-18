@@ -306,7 +306,7 @@ h1, h2, h3, p { margin-top: 0; }
 .ending-heart:hover { filter: drop-shadow(0 7px 22px rgba(255,75,143,.62)); }
 .ending-heart.is-tapped { animation: easter-heart-tap .22s cubic-bezier(.18,1.25,.3,1); }
 .ending-heart.is-popping { animation: easter-heart-pop .38s cubic-bezier(.18,.9,.28,1) forwards; }
-.love-you-burst { position: fixed; z-index: 2147483647; top: 0; left: 0; overflow: hidden; pointer-events: none; isolation: isolate; contain: strict; }
+.love-you-burst { position: absolute; z-index: 6; inset: 0; overflow: hidden; pointer-events: none; isolation: isolate; contain: strict; }
 .love-you-burst span { position: absolute; display: block; width: max-content; height: auto; white-space: nowrap; }
 .hidden-letter-overlay { position: fixed; z-index: 10000; inset: 0; display: grid; place-items: center; padding: max(18px, env(safe-area-inset-top)) 18px max(18px, env(safe-area-inset-bottom)); background: rgba(12,7,24,.34); backdrop-filter: blur(22px) saturate(130%); -webkit-backdrop-filter: blur(22px) saturate(130%); opacity: 0; transition: opacity .28s ease; }
 .hidden-letter-overlay.is-visible { opacity: 1; }
