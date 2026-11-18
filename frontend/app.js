@@ -322,7 +322,7 @@ function buildSlides(data) {
         <span class="ending-float ending-camera"><svg viewBox="0 0 48 48"><rect x="5" y="13" width="27" height="23" rx="6"/><path d="m32 20 11-6v21l-11-6z"/><circle cx="18.5" cy="24.5" r="5.5"/></svg></span>
         <span class="ending-float ending-whatsapp"><svg viewBox="0 0 48 48"><path d="M24 6a17 17 0 0 0-14.6 25.7L7 42l10.5-2.3A17 17 0 1 0 24 6Z"/><path d="M18 16c.7-.6 1.7-.4 2 .4l1.4 3c.3.7 0 1.3-.6 1.8l-1.1.9a13 13 0 0 0 5.8 5.8l.9-1.1c.5-.6 1.1-.9 1.8-.6l3 1.4c.8.3 1 1.3.4 2-1.2 1.5-3 2.1-4.9 1.7-6.2-1.3-11.1-6.2-12.4-12.4-.4-1.9.2-3.7 1.7-4.9Z"/></svg></span>
       </div>
-      <span class="ending-heart" aria-hidden="true">❤️</span>
+      <button class="ending-heart" type="button" data-heart-easter aria-label="Tap the red heart three times for a surprise" title="A little secret">❤️</button>
       <p class="eyebrow ending-eyebrow">Chapter one: Insta era complete.</p>
       <h2 class="ending-headline" aria-label="${count(totalMessages)} messages later... we outgrew the chatbox.">
         <span class="ending-count">${count(totalMessages)}</span>
@@ -330,8 +330,7 @@ function buildSlides(data) {
         <span class="ending-evolution">we outgrew<br><span class="outline">the chatbox.</span></span>
       </h2>
       <p class="ending-note">From late-night IG texts to endless video calls, WhatsApp spam, and a lifetime of shared reels.</p>
-      <p class="ending-footer" data-easter-letter tabindex="0" aria-label="Hold for a private note">Same two people. A million more stories to come.</p>
-      <button class="easter-heart" type="button" data-heart-easter aria-label="Tap the little heart three times" title="A little secret">♥</button>`,
+      <p class="ending-footer" data-easter-letter tabindex="0" aria-label="Hold for a private note">Same two people. A million more stories to come.</p>`,
   });
   return slides;
 }
@@ -506,6 +505,17 @@ function render(data) {
     longPressOrigin = null;
   }
 
+  function startLongPress(target, x, y) {
+    cancelLongPress();
+    longPressTarget = target;
+    longPressOrigin = { x, y };
+    longPressTimer = window.setTimeout(() => {
+      const heldTarget = longPressTarget;
+      cancelLongPress();
+      openHiddenLetter(heldTarget);
+    }, 1500);
+  }
+
   function tell(message) {
     toast.textContent = message;
     toast.classList.add("is-on");
@@ -637,21 +647,28 @@ function render(data) {
   content.addEventListener("pointerdown", (event) => {
     const target = event.target.closest("[data-easter-letter]");
     if (!target || (event.pointerType === "mouse" && event.button !== 0)) return;
-    cancelLongPress();
-    longPressTarget = target;
-    longPressOrigin = { x: event.clientX, y: event.clientY };
-    longPressTimer = window.setTimeout(() => {
-      const heldTarget = longPressTarget;
-      cancelLongPress();
-      openHiddenLetter(heldTarget);
-    }, 1500);
+    startLongPress(target, event.clientX, event.clientY);
   }, { passive: true });
   window.addEventListener("pointerup", cancelLongPress, { passive: true });
   window.addEventListener("pointercancel", cancelLongPress, { passive: true });
   window.addEventListener("pointermove", (event) => {
     if (!longPressOrigin) return;
-    if (Math.hypot(event.clientX - longPressOrigin.x, event.clientY - longPressOrigin.y) > 14) cancelLongPress();
+    if (Math.hypot(event.clientX - longPressOrigin.x, event.clientY - longPressOrigin.y) > 32) cancelLongPress();
   }, { passive: true });
+  if (!("PointerEvent" in window)) {
+    content.addEventListener("touchstart", (event) => {
+      const target = event.target.closest("[data-easter-letter]");
+      const touch = event.changedTouches[0];
+      if (target && touch) startLongPress(target, touch.clientX, touch.clientY);
+    }, { passive: true });
+    window.addEventListener("touchend", cancelLongPress, { passive: true });
+    window.addEventListener("touchcancel", cancelLongPress, { passive: true });
+    window.addEventListener("touchmove", (event) => {
+      if (!longPressOrigin) return;
+      const touch = event.changedTouches[0];
+      if (touch && Math.hypot(touch.clientX - longPressOrigin.x, touch.clientY - longPressOrigin.y) > 32) cancelLongPress();
+    }, { passive: true });
+  }
   content.addEventListener("contextmenu", (event) => {
     if (event.target.closest("[data-easter-letter]")) event.preventDefault();
   });

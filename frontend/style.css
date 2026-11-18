@@ -287,7 +287,8 @@ h1, h2, h3, p { margin-top: 0; }
 .ending-reel { top: 18%; left: 3%; transform: rotateY(16deg) rotateZ(-8deg); }
 .ending-camera { top: 43%; right: 2%; transform: rotateY(-18deg) rotateZ(8deg); animation-delay: -2.3s; }
 .ending-whatsapp { bottom: 11%; left: 7%; transform: rotateY(12deg) rotateZ(-6deg); animation-delay: -4.5s; }
-.ending-heart { display: block; margin-bottom: 5px; font-size: 2.35rem; animation: heartbeat 1.9s ease-in-out infinite; filter: drop-shadow(0 7px 18px rgba(83,20,55,.24)); }
+.ending-heart { position: relative; z-index: 2; display: grid; width: 60px; height: 60px; place-items: center; margin: 0 0 5px; padding: 0; border: 0; border-radius: 50%; color: inherit; background: transparent; font-size: 2.35rem; line-height: 1; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; animation: heartbeat 1.9s ease-in-out infinite; filter: drop-shadow(0 7px 18px rgba(83,20,55,.24)); }
+.ending-heart:focus-visible { outline: 2px solid rgba(255,239,193,.88); outline-offset: 3px; }
 .ending-eyebrow { margin-bottom: 7px; color: rgba(255,243,255,.82); }
 .ending-headline { display: flex; flex-direction: column; align-items: center; max-width: 100%; margin: 0 0 13px; line-height: .95; letter-spacing: -.065em; }
 .ending-count, .ending-message, .ending-evolution { display: block; opacity: 0; filter: blur(10px); animation: ending-type-focus 1.5s cubic-bezier(.2,.72,.25,1) forwards; }
@@ -299,12 +300,11 @@ h1, h2, h3, p { margin-top: 0; }
 .ending-footer { margin: 12px 0 0; color: #ffe8bb; font-size: clamp(.76rem, 3.5cqw, .92rem); font-weight: 850; line-height: 1.25; }
 .ending-signature { margin: 8px 0 0; font-weight: 950; font-size: .88rem; color: rgba(255,255,255,.77); }
 .ending-signature span { color: #ffe4a4; }
-.ending-footer[data-easter-letter] { cursor: pointer; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; touch-action: manipulation; }
+.ending-footer[data-easter-letter] { cursor: pointer; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; touch-action: none; }
 .ending-footer[data-easter-letter]:focus-visible { outline: 2px solid rgba(255,239,193,.88); outline-offset: 5px; border-radius: 4px; }
-.easter-heart { position: absolute; z-index: 2; right: 8px; bottom: 2px; display: grid; width: 28px; height: 28px; place-items: center; padding: 0; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; color: rgba(255,236,244,.8); background: rgba(255,255,255,.08); font-size: .8rem; line-height: 1; opacity: .62; cursor: pointer; -webkit-tap-highlight-color: transparent; animation: easter-heart-breathe 2.8s ease-in-out infinite; transition: opacity .18s ease, background .18s ease; }
-.easter-heart:hover, .easter-heart:focus-visible { opacity: 1; background: rgba(255,255,255,.17); outline: 2px solid rgba(255,255,255,.5); outline-offset: 2px; }
-.easter-heart.is-tapped { animation: easter-heart-tap .22s cubic-bezier(.18,1.25,.3,1); }
-.easter-heart.is-popping { animation: easter-heart-pop .38s cubic-bezier(.18,.9,.28,1) forwards; }
+.ending-heart:hover { filter: drop-shadow(0 7px 22px rgba(255,75,143,.62)); }
+.ending-heart.is-tapped { animation: easter-heart-tap .22s cubic-bezier(.18,1.25,.3,1); }
+.ending-heart.is-popping { animation: easter-heart-pop .38s cubic-bezier(.18,.9,.28,1) forwards; }
 .love-you-burst { position: fixed; z-index: 9998; inset: 0; overflow: hidden; pointer-events: none; isolation: isolate; }
 .love-you-burst span { position: absolute; left: var(--love-left); bottom: -2.5rem; color: #fff3f7; font-size: var(--love-size); font-weight: 850; letter-spacing: -.035em; white-space: nowrap; text-shadow: 0 2px 15px rgba(255,75,143,.58), 0 0 24px rgba(255,210,224,.25); animation: love-you-rise var(--love-duration) cubic-bezier(.2,.65,.25,1) var(--love-delay) both; }
 .love-you-burst span:nth-child(3n) { color: #ffe8a7; }
