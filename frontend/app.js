@@ -330,7 +330,8 @@ function buildSlides(data) {
         <span class="ending-evolution">we outgrew<br><span class="outline">the chatbox.</span></span>
       </h2>
       <p class="ending-note">From late-night IG texts to endless video calls, WhatsApp spam, and a lifetime of shared reels.</p>
-      <p class="ending-footer">Same two people. A million more stories to come.</p>`,
+      <p class="ending-footer" data-easter-letter tabindex="0" aria-label="Hold for a private note">Same two people. A million more stories to come.</p>
+      <button class="easter-heart" type="button" data-heart-easter aria-label="Tap the little heart three times" title="A little secret">♥</button>`,
   });
   return slides;
 }
@@ -430,6 +431,80 @@ function render(data) {
   let toastTimer;
   let coverExiting = false;
   let slideRevealTimer;
+  let heartTapCount = 0;
+  let heartBurstTriggered = false;
+  let heartPopTimer;
+  let longPressTimer;
+  let longPressTarget = null;
+  let longPressOrigin = null;
+  let letterOverlay = null;
+  let returnFocusTarget = null;
+
+  const hiddenLetterText = "Hi you, Ye stats to sirf ek fun project h and I’m not sure how accurate it is, but one thing I’m sure of is that all these numbers can’t express how much I love you my baby😽. Our first meet still feels like a dream to me, and meeting you is the best coincidence that’s ever happened to me💗.";
+
+  function makeLoveYouBurst() {
+    const burst = document.createElement("div");
+    burst.className = "love-you-burst";
+    burst.setAttribute("aria-hidden", "true");
+    for (let i = 0; i < 36; i += 1) {
+      const phrase = document.createElement("span");
+      phrase.textContent = "I love you";
+      phrase.style.setProperty("--love-left", `${Math.random() * 100}%`);
+      phrase.style.setProperty("--love-drift", `${Math.round(Math.random() * 110 - 55)}px`);
+      phrase.style.setProperty("--love-duration", `${(1.8 + Math.random() * 1.05).toFixed(2)}s`);
+      phrase.style.setProperty("--love-delay", `${(Math.random() * .42).toFixed(2)}s`);
+      phrase.style.setProperty("--love-size", `${(.78 + Math.random() * .42).toFixed(2)}rem`);
+      burst.append(phrase);
+    }
+    document.body.append(burst);
+    window.setTimeout(() => burst.remove(), 3600);
+  }
+
+  function closeHiddenLetter() {
+    if (!letterOverlay) return;
+    const closingOverlay = letterOverlay;
+    letterOverlay = null;
+    closingOverlay.classList.remove("is-visible");
+    window.setTimeout(() => closingOverlay.remove(), reduceMotion ? 0 : 280);
+    document.body.style.overflow = "";
+    returnFocusTarget?.focus?.({ preventScroll: true });
+    returnFocusTarget = null;
+  }
+
+  function openHiddenLetter(target) {
+    if (letterOverlay) return;
+    returnFocusTarget = target;
+    target?.blur?.();
+    const overlay = document.createElement("div");
+    overlay.className = "hidden-letter-overlay";
+    overlay.setAttribute("role", "presentation");
+    overlay.innerHTML = `<article class="hidden-letter-card" role="dialog" aria-modal="true" aria-label="A little note for you" tabindex="-1">
+      <button class="hidden-letter-close" type="button" aria-label="Close note">×</button>
+      <span class="hidden-letter-sparkle" aria-hidden="true">✦</span>
+      <p class="hidden-letter-copy"></p>
+      <span class="hidden-letter-heart" aria-hidden="true">💗</span>
+    </article>`;
+    overlay.querySelector(".hidden-letter-copy").textContent = hiddenLetterText;
+    const card = overlay.querySelector(".hidden-letter-card");
+    overlay.addEventListener("click", (event) => {
+      if (event.target === overlay) closeHiddenLetter();
+    });
+    overlay.querySelector(".hidden-letter-close").addEventListener("click", closeHiddenLetter);
+    document.body.append(overlay);
+    document.body.style.overflow = "hidden";
+    letterOverlay = overlay;
+    requestAnimationFrame(() => {
+      overlay.classList.add("is-visible");
+      card.focus({ preventScroll: true });
+    });
+  }
+
+  function cancelLongPress() {
+    clearTimeout(longPressTimer);
+    longPressTimer = null;
+    longPressTarget = null;
+    longPressOrigin = null;
+  }
 
   function tell(message) {
     toast.textContent = message;
@@ -442,7 +517,13 @@ function render(data) {
   }
   function show() {
     clearTimeout(slideRevealTimer);
+    cancelLongPress();
     const slide = slides[index];
+    if (slide.id === "ending") {
+      heartTapCount = 0;
+      heartBurstTriggered = false;
+      clearTimeout(heartPopTimer);
+    }
     stage.className = `story-stage theme-${slide.theme}`;
     content.className = `story-content ${slide.id === "cover" ? "cover-content" : ""} ${slide.id === "ending" ? "ending-content" : ""} slide-enter`;
     content.innerHTML = slide.content;
@@ -519,6 +600,24 @@ function render(data) {
   app.addEventListener("click", (event) => {
     const button = event.target.closest("button");
     if (!button) return;
+    if (button.matches("[data-heart-easter]")) {
+      if (heartBurstTriggered) return;
+      heartTapCount += 1;
+      button.classList.remove("is-tapped");
+      void button.offsetWidth;
+      button.classList.add("is-tapped");
+      if (heartTapCount >= 3) {
+        heartBurstTriggered = true;
+        button.disabled = true;
+        button.classList.remove("is-tapped");
+        button.classList.add("is-popping");
+        heartPopTimer = window.setTimeout(() => {
+          button.remove();
+          makeLoveYouBurst();
+        }, reduceMotion ? 0 : 390);
+      }
+      return;
+    }
     if (button.dataset.action === "prev") go(index - 1);
     if (button.dataset.action === "next") {
       if (index === 0 && !coverExiting) {
@@ -535,7 +634,39 @@ function render(data) {
       tell("Your stat card is ready ✨");
     }
   });
+  content.addEventListener("pointerdown", (event) => {
+    const target = event.target.closest("[data-easter-letter]");
+    if (!target || (event.pointerType === "mouse" && event.button !== 0)) return;
+    cancelLongPress();
+    longPressTarget = target;
+    longPressOrigin = { x: event.clientX, y: event.clientY };
+    longPressTimer = window.setTimeout(() => {
+      const heldTarget = longPressTarget;
+      cancelLongPress();
+      openHiddenLetter(heldTarget);
+    }, 1500);
+  }, { passive: true });
+  window.addEventListener("pointerup", cancelLongPress, { passive: true });
+  window.addEventListener("pointercancel", cancelLongPress, { passive: true });
+  window.addEventListener("pointermove", (event) => {
+    if (!longPressOrigin) return;
+    if (Math.hypot(event.clientX - longPressOrigin.x, event.clientY - longPressOrigin.y) > 14) cancelLongPress();
+  }, { passive: true });
+  content.addEventListener("contextmenu", (event) => {
+    if (event.target.closest("[data-easter-letter]")) event.preventDefault();
+  });
+  content.addEventListener("keydown", (event) => {
+    if (event.target.closest("[data-easter-letter]") && ["Enter", " "].includes(event.key)) {
+      event.preventDefault();
+      cancelLongPress();
+      openHiddenLetter(event.target.closest("[data-easter-letter]"));
+    }
+  });
   window.addEventListener("keydown", (event) => {
+    if (letterOverlay) {
+      if (event.key === "Escape") closeHiddenLetter();
+      return;
+    }
     if (["ArrowRight", "PageDown", " "].includes(event.key)) { event.preventDefault(); go(index + 1); }
     if (["ArrowLeft", "PageUp"].includes(event.key)) { event.preventDefault(); go(index - 1); }
     if (event.key === "Home") go(0);
