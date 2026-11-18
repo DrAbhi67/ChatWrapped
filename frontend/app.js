@@ -330,7 +330,7 @@ function buildSlides(data) {
         <span class="ending-evolution">we outgrew<br><span class="outline">the chatbox.</span></span>
       </h2>
       <p class="ending-note">From late-night IG texts to endless video calls, WhatsApp spam, and a lifetime of shared reels.</p>
-      <p class="ending-footer" data-easter-letter tabindex="0" aria-label="Hold for a private note">Same two people. A million more stories to come.</p>`,
+      <button class="ending-footer" type="button" data-easter-letter aria-label="Hold this sentence for a private note">Same two people. A million more stories to come.</button>`,
   });
   return slides;
 }
@@ -450,6 +450,7 @@ function render(data) {
       phrase.textContent = "I love you";
       phrase.style.setProperty("--love-left", `${Math.random() * 100}%`);
       phrase.style.setProperty("--love-drift", `${Math.round(Math.random() * 110 - 55)}px`);
+      phrase.style.setProperty("--love-y", `${15 + Math.random() * 72}vh`);
       phrase.style.setProperty("--love-duration", `${(1.8 + Math.random() * 1.05).toFixed(2)}s`);
       phrase.style.setProperty("--love-delay", `${(Math.random() * .42).toFixed(2)}s`);
       phrase.style.setProperty("--love-size", `${(.78 + Math.random() * .42).toFixed(2)}rem`);
@@ -501,6 +502,7 @@ function render(data) {
   function cancelLongPress() {
     clearTimeout(longPressTimer);
     longPressTimer = null;
+    longPressTarget?.classList.remove("is-holding");
     longPressTarget = null;
     longPressOrigin = null;
   }
@@ -509,11 +511,12 @@ function render(data) {
     cancelLongPress();
     longPressTarget = target;
     longPressOrigin = { x, y };
+    target.classList.add("is-holding");
     longPressTimer = window.setTimeout(() => {
       const heldTarget = longPressTarget;
       cancelLongPress();
       openHiddenLetter(heldTarget);
-    }, 1500);
+    }, 1000);
   }
 
   function tell(message) {
